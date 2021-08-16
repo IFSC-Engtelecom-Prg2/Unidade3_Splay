@@ -24,7 +24,11 @@ namespace splay {
 
     // adiciona "algo" à árvore.
     // ao final, esse novo valor se tornará a nova raiz da árvore
-    template <typename T> bool splay_adiciona(Splay<T> & arv, const T & algo);
+    template <typename T> void splay_adiciona(Splay<T> & arv, const T & algo);
+
+    // procura o dado que é igual a "algo", e retorna uma cópia
+    // se não o contrar, dispara uma exceção
+    template <typename T> T splay_acessa(Splay<T> & arv, const T & algo);
 
 }
 #endif //SPLAY_SPLAY_H
