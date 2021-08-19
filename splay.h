@@ -5,6 +5,10 @@
 #ifndef SPLAY_SPLAY_H
 #define SPLAY_SPLAY_H
 
+// as declarações da árvores splay ficarão dentro do namespace splay
+// elas serão assim acessadas com o prefixo splay::
+// ou diretamente, se for usado "using namespace splay"
+
 namespace splay {
 
     template <typename T> struct Nodo {
@@ -27,7 +31,7 @@ namespace splay {
     template <typename T> void splay_adiciona(Splay<T> & arv, const T & algo);
 
     // procura o dado que é igual a "algo", e retorna uma cópia
-    // se não o contrar, dispara uma exceção
+    // se não o encontrar, dispara uma exceção
     template <typename T> T splay_acessa(Splay<T> & arv, const T & algo);
 
 }
